@@ -1,11 +1,54 @@
-body{
+@import "vars";
+@import "mixins";
+body {
   margin: 0;
   padding: 0;
+  font-family: $ff-main;
   font-size: 10px;
+  background-color: $bg-color;
   user-select: none;
-
-  & .container{
-    width: 100vw;
-    height: 100vh;
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .hidden {
+    display: none !important;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  min-width: 20rem;
+  header {
+    min-height: 15rem;
+    @import "./sections/header";
+  }
+  main {
+    margin: 3rem 1rem 0 1rem;
+    @import "./sections/mainBlock";
+    @import "./sections/form";
+    .main_tips {
+      text-align: center;
+      font-weight: 400;
+      font-size: $fs-small;
+      color: $silver;
+    }
+  }
+  footer {
+    margin: 1rem 0 0 0;
+    padding: 1rem 0;
+    background-color: $block-bg;
+    .footer_nav {
+      color: $white;
+      font-weight: 400;
+      font-style: normal;
+      font-size: $fs-small;
+      line-height: $fs-large;
+      @include flexColum-style();
+    }
   }
 }

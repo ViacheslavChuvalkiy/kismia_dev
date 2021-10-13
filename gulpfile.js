@@ -1,4 +1,4 @@
-const {src, dest, watch, parallel} = require('gulp');
+const {parallel, series, src, watch, dest} = require('gulp');
 const sass        = require('gulp-sass');
 const concat      = require('gulp-concat');
 const browserSync = require("browser-sync").create();
@@ -12,22 +12,19 @@ const path = {
     html: 'build/',
     js: 'build/js/',
     css: 'build/css/',
-    img: 'build/img/',
-    audio: 'build/audio/'
+    img: 'build/img/'
   },
   src: { //Пути откуда брать исходники
     html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
     js: 'src/js/',//В стилях и скриптах нам понадобятся только main файлы
     style: 'src/styles/index.scss',
     img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
-    audio: 'src/audio/**/*.*'
   },
   watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
     html:   'src/**/*.html',
     js:     'src/js/**/*.js',
-    style:  'src/style/**/*.scss',
-    img:    'src/img/**/*.*',
-    audio:  'src/audio/**/*.*'
+    style:  'src/styles/**/*.scss',
+    img:    'src/img/**/*.*'
   },
   clean: './build'
 };
@@ -112,10 +109,10 @@ function clean() {
 }
 
 function watching(){
-  watch(['watch.style'],styles);
-  watch(['watch.html'],html).on('change',browserSync.reload);
-  watch(['watch.js'],js);
-  watch(['watch.img'],images);
+  watch([path.watch.style],styles);
+  watch([path.watch.html], html).on('change',browserSync.reload);
+  watch([path.watch.js], js);
+  watch([path.watch.img],images);
 }
 
 exports.styles      = styles;
@@ -127,4 +124,4 @@ exports.watching    = watching;
 exports.server      = server;
 
 exports.build = series(clean,images,styles,js,html);
-exports.default = parallel(clean,images,styles,html,js,server,watching);
+exports.default = parallel(server,watching);

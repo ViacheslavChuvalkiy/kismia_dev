@@ -2,32 +2,241 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>test</title>
+  <title>kismia</title>
   <link rel="icon" href="./img/logo.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Jost:wght@500;700&family=Roboto:wght@400;500;700;900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./styles/style.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
 
 <div class="container">
+  <header>
+    <div class="header_block">
+      <h1>Наибольшая база анкет
+        для знакомств</h1>
+      <h2 class="hidden">Цель знакомства:</h2>
+      <h2 class="hidden">
+        Создать анкету
+      </h2>
+      <h3 class="hidden">
+        Бистрая регистрация, чтоби перейти к общению
+      </h3>
+    </div>
+  </header>
 
-<header>
-  <div class="header_bg"></div>
-</header>
+  <main>
+    <div class="main_btns hidden">
+      <button id="option1" class="btn_options btn_men">Я мужчина</button>
+      <button id="option2" class="btn_options btn_women">Я женщина</button>
+      <button id="option3" class="btn_options hidden">дружба и общение</button>
+      <button id="option4" class="btn_options hidden">cерьезные отношения</button>
+      <button id="option5" class="btn_options hidden">создание семьи</button>
+      <button id="option6" class="btn_options hidden">романтика и свидания</button>
+    </div>
+    <div class="main_comments hidden">
+      <div class="comment_wrapper">
+        <div class="comment_contents">
+          <img src="./img/client1.png" alt="clients_photo" class="comment_img">
+          <div class="comment_info">
+            <h3>Аня и Дима</h3>
+            <p>3 недели назад</p>
+          </div>
+          <p class="comment_content">
+            Хочу поделиться своей историей. Познакомилась с Игорем на вашем сайте, совпали интересы -
+            мы вдвоем обожаем путешествия и новые страны. Так начали обсуждать всякое и решили: а
+            почему бы не провести отпуск вдвоем? Выбрали Занзибар и впервые увидели друг
+            <span class="showAllText">Читать полностю</span>
+          </p>
+        </div>
+      </div>
+      <div class="comment_wrapper">
+        <div class="comment_contents">
+          <img src="./img/client2.png" alt="clients_photo" class="comment_img">
+          <div class="comment_info">
+            <h3>Аня и Андрей</h3>
+            <p>5 недели назад</p>
+          </div>
+          <p class="comment_content">
+            ...нашел на KISMIA не просто интересную знакомую, а по-настоящему СВОЕГО человека. несмотря на разницу в
+            возрасте -
+            сразу вспыхнули чувства и не угасают вот уже два года!!!
+            с Анечкой мы будто созданы друг для друга и знаете... ну не встретились
+            <span class="showAllText">Читать полностю</span>
+          </p>
+        </div>
+      </div>
+      <div class="comment_wrapper">
+        <div class="comment_contents">
+          <img src="./img/client3.png" alt="clients_photo" class="comment_img">
+          <div class="comment_info">
+            <h3>Михаил и Аля</h3>
+            <p>12 недели назад</p>
+          </div>
+          <p class="comment_content">
+            Скажу правду: я уже отчаялась найти кого-то. Вроде бы и молодая, и общительная, но...
+            Начинаешь общаться c человеком и скучно становиться. Ни планов,ни амбиций.
+            Повезло, что пересеклась на Кисмиа с Мишей -
+            интереснейший мужчина, кинолог. В первый день знакомства
+            <span class="showAllText">Читать полностю</span>
+          </p>
+        </div>
+      </div>
+      <div class="comment_wrapper">
+        <div class="comment_contents">
+          <img src="./img/client4.png" alt="clients_photo" class="comment_img">
+          <div class="comment_info">
+            <h3>Екатерина и Олег</h3>
+            <p>15 недели назад</p>
+          </div>
+          <p class="comment_content">
+            никогда не воспринимала сайты знакомств всерьез, думала, это только для одиноких женщин 40+. а зря! 😜
+            зарегистрировалась и пропала! это так захватывающе, искать мужчин по интересам,
+            смотреть, кто поблизости, писать первой и с трепетом ждать ответа.
+            <span class="showAllText">Читать полностю</span>
+          </p>
+        </div>
+      </div>
+      <div class="comment_wrapper">
+        <div class="comment_contents">
+          <img src="./img/client5.png" alt="clients_photo" class="comment_img">
+          <div class="comment_info">
+            <h3>Ирина и Александр</h3>
+            <p>28 недели назад</p>
+          </div>
+          <p class="comment_content">
+            Попала на Кисима по рекомендации подруги, начала общаться с мужчинами.
+            Понравилось, что здесь нет рекламы и мало неадекватов...
+            Встречаются, конечно, но не так много, не критично...
+            C Cашей познакомилась где-то через пару недель и сразу поняла: это тот самый...
+            <span class="showAllText">Читать полностю</span>
+          </p>
+        </div>
+      </div>
+      <div class="comment_wrapper">
+        <div class="comment_contents">
+          <img src="./img/client6.png" alt="clients_photo" class="comment_img">
+          <div class="comment_info">
+            <h3>Иван и Маша</h3>
+            <p>32 недели назад</p>
+          </div>
+          <p class="comment_content">
+            Зашел на сайтец просто для
+            развлечения: фото женщин
+            посмотреть, максимум - пообщаться
+            по переписке. но судьба как-то так сложилась,
+            что встретил тут Марию — очаровательную женщину!
+            мы из соседних городов, но это не помеха. она уже приезжала ко
+            мне несколько раз на выходные...
+            <span class="showAllText">Читать полностю</span>
+          </p>
+        </div>
+      </div>
 
-<main>
+    </div>
+    <h3 class="main_tips hidden ">Чтобы идеально подобрать для вас пару, ответьте на несколько вопросов</h3>
+    <div class="main_form">
+      <form action="#">
+        <div class="form_name_block">
+          <p>Имя:</p>
+          <input type="text" id="name" minlength="3" placeholder="Введите имя" required>
+          <img src="./img/validated_icon.png" alt="correct" class="hidden">
+          <img src="./img/non_validation2_icon.png" alt="wrong" class="hidden">
+          <span class="form_name form_status hidden">Пожалуйста, используйте только буквы</span>
+        </div>
 
+        <p>Дата рождения:</p>
+        <div class="form_date">
+          <select id="day">
+            <option label="ДД" value="0" disabled selected hidden></option>
+            <option label="01" value="01"></option>
+            <option label="02" value="02"></option>
+            <option label="03" value="03"></option>
+            <option label="04" value="04"></option>
+            <option label="05" value="05"></option>
+            <option label="06" value="06"></option>
+            <option label="07" value="07"></option>
+            <option label="08" value="08"></option>
+            <option label="09" value="09"></option>
+            <option label="10" value="10"></option>
+            <option label="11" value="11"></option>
+            <option label="12" value="12"></option>
+            <option label="13" value="13"></option>
+            <option label="14" value="14"></option>
+            <option label="15" value="15"></option>
+            <option label="16" value="16"></option>
+            <option label="17" value="17"></option>
+            <option label="18" value="18"></option>
+            <option label="19" value="19"></option>
+            <option label="20" value="20"></option>
+            <option label="21" value="21"></option>
+            <option label="22" value="22"></option>
+            <option label="23" value="23"></option>
+            <option label="24" value="24"></option>
+            <option label="25" value="25"></option>
+            <option label="26" value="26"></option>
+            <option label="27" value="27"></option>
+            <option label="28" value="28"></option>
+            <option label="29" value="29"></option>
+            <option label="30" value="30"></option>
+            <option label="31" value="31"></option>
+          </select><span></span>
+          <select id="month">
+            <option label="ММ" disabled selected hidden>ММ</option>
+            <option label="Январь">Январь</option>
+            <option label="Февраль">Февраль</option>
+            <option label="Март">Март</option>
+            <option label="Апрель">Апрель</option>
+            <option label="Май">Май</option>
+            <option label="Июнь">Июнь</option>
+            <option label="Июль">Июль</option>
+            <option label="Агуст">Агуст</option>
+            <option label="Сентябрь">Сентябрь</option>
+            <option label="Октябрь">Октябрь</option>
+            <option label="Ноябрь">Ноябрь</option>
+            <option label="Декабрь">Декабрь</option>
+          </select><span></span>
+          <select id="year">
+            <option label="ГГГГ" value="0" disabled selected hidden></option>
+          </select><span></span>
+        </div>
+        <span class="form_date_status form_status hidden">Пожалуйста, введите корректные данные</span>
 
+        <div class="form_passw_block">
+          <p>Придумай пароль:</p>
+          <input type="password" placeholder="Минимум 8 символов">
+          <img src="./img/hide_icon.png" alt="password">
+          <span class="form_passw form_status hidden">Пожалуйста, введите корректные данные</span>
+        </div>
 
-</main>
+        <div class="form_email">
+          <p>Email:</p>
+          <input type="email" placeholder="Введите свою почту">
+          <span class="form_email form_status hidden">Пожалуйста, введите корректные данные</span>
+        </div>
 
-<footer>
+        <button type="submit" class="form_btn">Создать</button>
 
-</footer>
+        <div class="form_accord">
+          <label for="accord">
+            <input id="accord" type="checkbox">
+            <span></span>
+          </label>
+          <span>Регистрируясь, я подтверждаю что мне исполнилось 18 лет.
+            Я принимаю условия <a href="#">лицензионного соглашения, политики конфиденциальности,
+            обработки персональных данных.</a>
+          </span>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <ul class="footer_nav">
+      <li>О проекте</li>
+      <li>Подержека</li>
+      <li>Подержека</li>
+    </ul>
+  </footer>
 
 </div>
 
