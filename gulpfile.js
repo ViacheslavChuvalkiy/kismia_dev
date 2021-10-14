@@ -73,11 +73,12 @@ function html(){
 function js(){
 
   return src([
-
+    path.src.js + '/sectors/events.js',
+    path.src.js + '/sectors/validation.js',
     path.src.js + 'index.js'
   ])
     .pipe(concat('index.min.js'))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(dest(path.build.js))
     .pipe(browserSync.stream())
 }
