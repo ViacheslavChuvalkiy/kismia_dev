@@ -78,7 +78,7 @@ function js(){
     path.src.js + 'index.js'
   ])
     .pipe(concat('index.min.js'))
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(dest(path.build.js))
     .pipe(browserSync.stream())
 }
