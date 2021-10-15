@@ -16,9 +16,27 @@ const initFormButtons = () => {
   let form = document.querySelector('.main_form');
   let main_block = document.getElementsByTagName('main')[0];
   let dateArrow = document.querySelectorAll('.form_date span');
+  let commentAllTextLinks = document.querySelectorAll('.showAllText');
+  let commentPartTextLinks = document.querySelectorAll('.showPartText');
 
   dateArrow.forEach((item) => {
-    item.addEventListener('click', () => {},true)
+    item.addEventListener('click', () => {})
+  });
+
+  commentAllTextLinks.forEach((item) => {
+    item.addEventListener('click', () => {
+     let parenComment = event.target.parentElement;
+      parenComment.classList.add('hidden');
+      parenComment.nextElementSibling.classList.remove('hidden');
+    })
+  });
+
+  commentPartTextLinks.forEach((item) => {
+    item.addEventListener('click', () => {
+      let parenComment = event.target.parentElement;
+      parenComment.classList.add('hidden');
+      parenComment.previousElementSibling.classList.remove('hidden');
+    })
   });
 
   formBtns.forEach((item) => {

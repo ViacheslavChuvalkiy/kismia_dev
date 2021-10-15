@@ -60,7 +60,7 @@
         font-weight: 500;
         vertical-align: top;
         h3, p {
-          display: inline-block;
+          display: block;
           color: $white;
           margin: 0;
           padding: 0.2rem 0 0 0.2rem;
@@ -77,12 +77,13 @@
         color: $grey;
         line-height: 1.2rem;
       }
-      .showAllText {
+      .showAllText, .showPartText {
+        display: inline-block;
         text-align: left;
         color: $orange;
         font-weight: 400;
       }
-      .showAllText:hover {
+      .showAllText:hover, .showPartText:hover {
         text-decoration: underline;
       }
     }

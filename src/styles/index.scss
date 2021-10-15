@@ -6,7 +6,6 @@ body {
   font-family: $ff-main;
   font-size: 10px;
   background-color: $bg-color;
-  overflow-x: hidden;
   user-select: none;
   ul, li {
     margin: 0;
@@ -17,35 +16,31 @@ body {
     opacity: 0 !important;
     display: none !important;
   }
-  .hide{
+  .hide {
     transform: translate(-1000%, 0);
     transition: all 0.6s ease;
   }
-
 }
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100vw;
+  width: calc(100vw - (100vw - 100%));
   height: 100vh;
-
-  .header_block{
+  min-width: 18.5rem;
+  .header_block {
     min-height: 7rem;
     transition: all 0.3s ease;
   }
-
   header {
     min-height: 15rem;
     @import "./sections/header";
   }
-
   .main_block {
     margin: 0.5rem 1rem 0 1rem;
     opacity: 1;
     transition: all 0.3s ease;
   }
-
   main {
     margin: 3rem 1rem 0 1rem;
     @import "./sections/mainBlock";
@@ -68,6 +63,114 @@ body {
       font-size: $fs-small;
       line-height: $fs-large;
       @include flexColum-style();
+    }
+  }
+}
+@media (min-height: 700px) {
+  body {
+    font-size: 16px;
+    .container {
+      header {
+        min-height: 340px;
+        .header_block {
+          h1 {
+            font-size: 36px;
+            max-width: 400px;
+          }
+          h2 {
+            font-size: 30px;
+          }
+          h3 {
+            font-size: 20px;
+          }
+        }
+      }
+      .header_block{
+        min-height: 240px;
+      }
+      main {
+        .main_btn {
+          margin: 35px 0 16px 0;
+          min-width: 400px;
+          font-size: 32px;
+        }
+        .main_comments {
+          .comment_wrapper {
+            .comment_contents {
+              .comment_img {
+                width: 5.5rem;
+                height: 3rem;
+              }
+              .comment_info {
+                h3 {
+                  font-size: 28px;
+                  padding: 0.4rem 0 0 0.4rem;
+                }
+                p {
+                  padding: 0.6rem 0 0 0.4rem;
+                  font-size: 20px;
+                }
+              }
+              .comment_content {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+      .main_block {
+        .main_btns {
+          button {
+            margin: 35px 0 16px 0;
+            min-width: 400px;
+            font-size: 32px;
+          }
+        }
+        h3 {
+          font-size: 20px;
+        }
+        .main_form {
+          margin: 40px auto 0 auto;
+          max-width: 400px;
+          input, .form_btn, .form_date {
+            max-width: 400px;
+            font-size: 20px;
+          }
+          p {
+            font-size: 20px;
+          }
+          input::placeholder, select {
+            font-size: 18px;
+          }
+          .form_accord {
+            span, a {
+              font-size: 16px;
+            }
+            label {
+              span {
+                width: 16px;
+                height: 16px;
+              }
+              input:checked + span:before {
+                content: "\2714";
+                position: absolute;
+                top: -0.3rem;
+                color: $orange;
+                font-size: 17px;
+                left: 2px;
+              }
+            }
+          }
+        }
+      }
+      footer {
+        .footer_nav {
+          font-size: 20px;
+          li{
+            margin: 8px 0;
+          }
+        }
+      }
     }
   }
 }

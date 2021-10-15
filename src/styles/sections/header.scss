@@ -11,15 +11,16 @@
   background-size: cover;
   background-position-y: bottom;
   h1 {
-     font-family: $ff-second;
-     font-weight: 700;
-     margin: 0;
-     padding: 0 1rem;
-     position: absolute;
-     font-size: $fs-large;
-     color: $white;
-     bottom: -3rem;
-   }
+    font-family: $ff-second;
+    font-weight: 700;
+    max-width: 15rem;
+    bottom: -3rem;
+    margin: 0;
+    padding: 0 1rem;
+    position: absolute;
+    font-size: $fs-large;
+    color: $white;
+  }
   h2 {
     font-family: $ff-main;
     font-weight: 700;

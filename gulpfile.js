@@ -9,10 +9,10 @@ const del         = require('del');
 
 const path = {
   build: { //Тут мы укажем куда складывать готовые после сборки файлы
-    html: 'build/',
-    js: 'build/js/',
-    css: 'build/css/',
-    img: 'build/img/'
+    html: 'docs/',
+    js: 'docs/js/',
+    css: 'docs/css/',
+    img: 'docs/img/'
   },
   src: { //Пути откуда брать исходники
     html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
@@ -26,12 +26,12 @@ const path = {
     style:  'src/styles/**/*.scss',
     img:    'src/img/**/*.*'
   },
-  clean: './build'
+  clean: './docs'
 };
 
 const config = {
   server: {
-    baseDir: "./build"
+    baseDir: "./docs"
   },
   tunnel: true,
   host: 'localhost',
@@ -106,7 +106,7 @@ function images(){
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function clean() {
-  return del('build');
+  return del('docs');
 }
 
 function watching(){
