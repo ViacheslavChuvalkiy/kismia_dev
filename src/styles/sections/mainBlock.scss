@@ -1,0 +1,100 @@
+@import "../vars";
+@import "../mixins";
+.main_btns {
+  @include flexColum-style();
+  margin: 1rem 0 1rem 0;
+  button {
+    background: $btn-bg;
+    font-weight: 500;
+    @include btn-style();
+  }
+  .btn_women, .btn_men {
+    position: relative;
+  }
+  .btn_men:before {
+    content: url("../img/men.png");
+    position: absolute;
+    color: #3B3C4B;
+    top: 1rem;
+    left: 3rem;
+  }
+  .btn_women:before {
+    content: url("../img/women.png");
+    position: absolute;
+    color: #3B3C4B;
+    top: 1rem;
+    left: 3rem;
+  }
+}
+.main_comments {
+  padding: 1rem 0;
+  @include flexColum-style();
+  .comment_wrapper {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 40rem;
+    margin: 0 0 1rem 0;
+    padding: 0.5rem 0;
+    position: relative;
+    background-color: $block-bg;
+    border-radius: $radius-comment;
+    overflow: hidden;
+    .comment_contents {
+      padding: 2rem 2rem 0.3rem 2rem;
+      line-height: 1rem;
+      color: $input-bg;
+      font-size: $fs-small;
+      font-style: italic;
+      font-family: $ff-main;
+      font-weight: 400;
+      .comment_img {
+        display: inline-block;
+        width: 4.4rem;
+        height: 2.2rem;
+      }
+      .comment_info {
+        display: inline-block;
+        width: 60%;
+        font-style: normal;
+        font-weight: 500;
+        vertical-align: top;
+        h3, p {
+          display: block;
+          color: $white;
+          line-height: 1;
+          margin: 0;
+          padding: 0.2rem 0 0 0.2rem;
+        }
+        p {
+          font-size: $fs-small;
+          color: $grey;
+          font-weight: 400;
+        }
+      }
+      .comment_content {
+        margin: 0;
+        padding: 0.2rem 0;
+        color: $grey;
+        line-height: 1.2rem;
+      }
+      .showAllText, .showPartText {
+        display: inline-block;
+        text-align: left;
+        color: $orange;
+        font-weight: 400;
+      }
+      .showAllText:hover, .showPartText:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+  .comment_wrapper:after {
+    content: url("../img/quotes.png");
+    position: absolute;
+    color: #3B3C4B;
+    top: 1.2rem;
+    right: 0;
+  }
+}

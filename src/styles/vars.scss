@@ -1,8 +1,28 @@
-$ff-main: 'Jost', sans-serif;
-$ff-second: 'Roboto', sans-serif;
-$color-main: #2D2D2D;
-$btn-bg: linear-gradient(221.87deg, #FFB45C 0%, #FFA438 100%);
-$btn-color: #242530;
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500;700&family=Open+Sans&family=Roboto:wght@400;500;700&display=swap');
+$ff-main: 'Roboto', sans-serif;
+$ff-second: 'Jost', sans-serif;
+$ff-openSans: 'Open Sans', sans-serif;
+
+$btn-bg: linear-gradient(#FFB45C 0%, #FFA438 100%);
+$bg-color: #242530;
 $input-bg: #C7C8D0;
+$input-bg-active: #F3F5F6;
+$block-bg: #2F303E;
 $input-color: #2D2D2D;
 $radius: 10px;
+$radius-comment: 12px;
+
+$white: #fff;
+$orange: #FFA438;
+$grey: #656D78;
+$grey: #8A8B95;
+$green: #599F39;
+$red: #FF5E5E;
+$black:#333333;
+$silver:#AAB2BD;
+
+
+$fs-main : 1rem;
+$fs-large: 1.4rem;
+$fs-small: 0.8rem;
+$fs-superSmall: 0.6rem;

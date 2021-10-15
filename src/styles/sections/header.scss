@@ -1,0 +1,44 @@
+@import "../vars";
+@import "../mixins";
+.header_block {
+  @include flexColum-style();
+  height: 100%;
+  position: relative;
+  text-align: center;
+  background-image: url("../img/bg_photo.svg"), linear-gradient(rgba(36, 37, 48, 0) 50.21%, #242530 79.83%);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
+  h1 {
+    font-family: $ff-second;
+    font-weight: 700;
+    max-width: 15rem;
+    bottom: -4rem;
+    margin: 0;
+    padding: 0 1rem;
+    position: absolute;
+    font-size: $fs-large;
+    color: $white;
+  }
+  h2 {
+    font-family: $ff-main;
+    font-weight: 700;
+    margin: 0;
+    padding: 0 1rem;
+    position: absolute;
+    font-size: $fs-main;
+    color: $white;
+    bottom: 0;
+  }
+  h3 {
+    font-family: $ff-main;
+    font-weight: 400;
+    margin: 0;
+    padding: 0 1rem;
+    position: absolute;
+    font-size: $fs-small;
+    color: $silver;
+    bottom: -3rem;
+  }
+}

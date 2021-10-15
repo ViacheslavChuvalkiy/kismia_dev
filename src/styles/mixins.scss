@@ -1,0 +1,25 @@
+@import "vars";
+@mixin btn-style() {
+  width: 100%;
+  height: auto;
+  max-width: 20rem;
+  margin: 0 0 1rem 0;
+  padding: $fs-main 0 calc(1rem + 1px) 0.5rem;
+  line-height: $fs-large;
+  color: $bg-color;
+  font-size: $fs-large;
+  font-family: $ff-second;
+  font-style: normal;
+  letter-spacing: 1px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: $radius;
+  transition: all 0.6s ease;
+}
+@mixin flexColum-style() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
