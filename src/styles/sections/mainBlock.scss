@@ -82,9 +82,9 @@
         text-align: left;
         color: $orange;
         font-weight: 400;
-        cursor: pointer;
       }
       .showAllText:hover, .showPartText:hover {
+        cursor: pointer;
         text-decoration: underline;
       }
     }
