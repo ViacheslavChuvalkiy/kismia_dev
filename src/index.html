@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>kismia</title>
@@ -25,15 +25,15 @@
   </header>
 
   <main>
-    <div class="main_btns hidden">
-      <button id="option1" class="btn_options btn_men">Я мужчина</button>
-      <button id="option2" class="btn_options btn_women">Я женщина</button>
-      <button id="option3" class="btn_options hidden">дружба и общение</button>
-      <button id="option4" class="btn_options hidden">cерьезные отношения</button>
-      <button id="option5" class="btn_options hidden">создание семьи</button>
-      <button id="option6" class="btn_options hidden">романтика и свидания</button>
+    <div class="main_btns">
+      <button id="option1" class="btn_options main_btn btn_men">Я мужчина</button>
+      <button id="option2" class="btn_options main_btn btn_women">Я женщина</button>
+      <button id="option3" class="btn_options selection_btn hidden">дружба и общение</button>
+      <button id="option4" class="btn_options selection_btn hidden">cерьезные отношения</button>
+      <button id="option5" class="btn_options selection_btn hidden">создание семьи</button>
+      <button id="option6" class="btn_options selection_btn hidden">романтика и свидания</button>
     </div>
-    <div class="main_comments hidden">
+    <div class="main_comments">
       <div class="comment_wrapper">
         <div class="comment_contents">
           <img src="./img/client1.png" alt="clients_photo" class="comment_img">
@@ -134,20 +134,20 @@
 
     </div>
     <h3 class="main_tips hidden ">Чтобы идеально подобрать для вас пару, ответьте на несколько вопросов</h3>
-    <div class="main_form">
-      <form action="#">
+    <div class="main_form hidden">
+      <form action="/">
         <div class="form_name_block">
           <p>Имя:</p>
-          <input type="text" id="name" minlength="3" placeholder="Введите имя" required>
-          <img src="./img/validated_icon.png" alt="correct" class="hidden">
-          <img src="./img/non_validation2_icon.png" alt="wrong" class="hidden">
+          <input type="text" id="name" minlength="3" placeholder="Введите имя" autocomplete="off" required>
+          <img src="./img/validated_icon.png" alt="correct icon" class="form_done_icon hidden">
+          <img src="./img/non_validation2_icon.png" alt="wrong icon" class="form_wrong_icon hidden">
           <span class="form_name form_status hidden">Пожалуйста, используйте только буквы</span>
         </div>
 
         <p>Дата рождения:</p>
         <div class="form_date">
           <select id="day">
-            <option label="ДД" value="0" disabled selected hidden></option>
+            <option label="ДД" value="1" disabled selected hidden></option>
             <option label="01" value="01"></option>
             <option label="02" value="02"></option>
             <option label="03" value="03"></option>
@@ -181,43 +181,44 @@
             <option label="31" value="31"></option>
           </select><span></span>
           <select id="month">
-            <option label="ММ" disabled selected hidden>ММ</option>
-            <option label="Январь">Январь</option>
-            <option label="Февраль">Февраль</option>
-            <option label="Март">Март</option>
-            <option label="Апрель">Апрель</option>
-            <option label="Май">Май</option>
-            <option label="Июнь">Июнь</option>
-            <option label="Июль">Июль</option>
-            <option label="Агуст">Агуст</option>
-            <option label="Сентябрь">Сентябрь</option>
-            <option label="Октябрь">Октябрь</option>
-            <option label="Ноябрь">Ноябрь</option>
-            <option label="Декабрь">Декабрь</option>
+            <option label="ММ" disabled selected hidden>1</option>
+            <option label="01">01</option>
+            <option label="02">02</option>
+            <option label="03">03</option>
+            <option label="04">04</option>
+            <option label="05">05</option>
+            <option label="06">06</option>
+            <option label="07">07</option>
+            <option label="08">08</option>
+            <option label="09">09</option>
+            <option label="10">10</option>
+            <option label="11">11</option>
+            <option label="12">12</option>
           </select><span></span>
           <select id="year">
             <option label="ГГГГ" value="0" disabled selected hidden></option>
           </select><span></span>
         </div>
         <span class="form_date_status form_status hidden">Пожалуйста, введите корректные данные</span>
+        <span class="form_date_year form_status hidden">Вам должно быть 18лет.</span>
 
         <div class="form_passw_block">
           <p>Придумай пароль:</p>
-          <input type="password" placeholder="Минимум 8 символов">
+          <input id="passw" type="password" autocomplete="off" placeholder="Минимум 8 символов">
           <img src="./img/hide_icon.png" alt="password">
           <span class="form_passw form_status hidden">Пожалуйста, введите корректные данные</span>
         </div>
 
         <div class="form_email">
           <p>Email:</p>
-          <input type="email" placeholder="Введите свою почту">
-          <span class="form_email form_status hidden">Пожалуйста, введите корректные данные</span>
+          <input id="email" type="email" placeholder="Введите свою почту">
+          <span class="form_email_status form_status hidden">Пожалуйста, введите корректные данные</span>
         </div>
 
         <button type="submit" class="form_btn">Создать</button>
 
         <div class="form_accord">
-          <label for="accord">
+         <label for="accord">
             <input id="accord" type="checkbox">
             <span></span>
           </label>

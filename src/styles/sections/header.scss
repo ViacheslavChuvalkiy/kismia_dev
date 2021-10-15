@@ -11,13 +11,33 @@
   background-size: cover;
   background-position-y: bottom;
   h1 {
-    font-family: $ff-second;
+     font-family: $ff-second;
+     font-weight: 700;
+     margin: 0;
+     padding: 0 1rem;
+     position: absolute;
+     font-size: $fs-large;
+     color: $white;
+     bottom: -3rem;
+   }
+  h2 {
+    font-family: $ff-main;
     font-weight: 700;
     margin: 0;
     padding: 0 1rem;
     position: absolute;
-    font-size: $fs-large;
+    font-size: $fs-main;
     color: $white;
+    bottom: 0;
+  }
+  h3 {
+    font-family: $ff-main;
+    font-weight: 400;
+    margin: 0;
+    padding: 0 1rem;
+    position: absolute;
+    font-size: $fs-small;
+    color: $silver;
     bottom: -3rem;
   }
 }
