@@ -100,7 +100,7 @@ const initFormButtons = () => {
       let option = document.createElement('option');
       option.value = start_year;
       option.label = start_year;
-      option.innerHTML = start_year;
+      option.innerText = start_year;
       select_year.appendChild(option);
       start_year++;
     }
