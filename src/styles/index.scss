@@ -91,7 +91,8 @@ body {
       main {
         .main_btn {
           margin: 35px 0 16px 0;
-          min-width: 400px;
+          width: 100%;
+          max-width: 400px;
           font-size: 32px;
         }
         .main_comments {
