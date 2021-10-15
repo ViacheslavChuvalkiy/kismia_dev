@@ -1,4 +1,4 @@
-const {src, dest, watch, parallel} = require('gulp');
+const {parallel, series, src, watch, dest} = require('gulp');
 const sass        = require('gulp-sass');
 const concat      = require('gulp-concat');
 const browserSync = require("browser-sync").create();
@@ -9,32 +9,29 @@ const del         = require('del');
 
 const path = {
   build: { //Тут мы укажем куда складывать готовые после сборки файлы
-    html: 'build/',
-    js: 'build/js/',
-    css: 'build/css/',
-    img: 'build/img/',
-    audio: 'build/audio/'
+    html: 'docs/',
+    js: 'docs/js/',
+    css: 'docs/css/',
+    img: 'docs/img/'
   },
   src: { //Пути откуда брать исходники
     html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
     js: 'src/js/',//В стилях и скриптах нам понадобятся только main файлы
     style: 'src/styles/index.scss',
     img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
-    audio: 'src/audio/**/*.*'
   },
   watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
     html:   'src/**/*.html',
     js:     'src/js/**/*.js',
-    style:  'src/style/**/*.scss',
-    img:    'src/img/**/*.*',
-    audio:  'src/audio/**/*.*'
+    style:  'src/styles/**/*.scss',
+    img:    'src/img/**/*.*'
   },
-  clean: './build'
+  clean: './docs'
 };
 
 const config = {
   server: {
-    baseDir: "./build"
+    baseDir: "./docs"
   },
   tunnel: true,
   host: 'localhost',
@@ -76,7 +73,8 @@ function html(){
 function js(){
 
   return src([
-
+    path.src.js + '/sectors/events.js',
+    path.src.js + '/sectors/validation.js',
     path.src.js + 'index.js'
   ])
     .pipe(concat('index.min.js'))
@@ -108,14 +106,14 @@ function images(){
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function clean() {
-  return del('build');
+  return del('docs');
 }
 
 function watching(){
-  watch(['watch.style'],styles);
-  watch(['watch.html'],html).on('change',browserSync.reload);
-  watch(['watch.js'],js);
-  watch(['watch.img'],images);
+  watch([path.watch.style],styles);
+  watch([path.watch.html], html).on('change',browserSync.reload);
+  watch([path.watch.js], js);
+  watch([path.watch.img],images);
 }
 
 exports.styles      = styles;
@@ -127,4 +125,4 @@ exports.watching    = watching;
 exports.server      = server;
 
 exports.build = series(clean,images,styles,js,html);
-exports.default = parallel(clean,images,styles,html,js,server,watching);
+exports.default = parallel(server,watching);

@@ -1,0 +1,150 @@
+@import "../vars";
+@import "../mixins";
+.main_form {
+  margin: 0 auto;
+  font-size: $fs-main;
+  text-align: center;
+  max-width: 20rem;
+  transition: all 0.3s ease;
+  .form_name_block, .form_passw_block, .form_email {
+    @include flexColum-style();
+  }
+  .form_name_block, .form_passw_block {
+    position: relative;
+    img {
+      position: absolute;
+      top: 3rem;
+      right: 1rem;
+      width: 2rem;
+    }
+  }
+  .form_date {
+    display: flex;
+    justify-content: space-between;
+    max-width: 20rem;
+    margin: 0 auto;
+    select {
+      width: 35%;
+      position: relative;
+      margin: 0 0.5rem 0 0;
+      padding: 0.9rem 0 0.9rem 1rem;
+      background: $input-bg;
+      border-radius: $radius;
+      overflow: hidden;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+    & select:nth-of-type(3) {
+      width: 40%;
+      margin: 0;
+    }
+    select:focus {
+      background: $input-bg-active;
+    }
+    span {
+      position: relative;
+    }
+    span:after {
+      content: "\02EC";
+      position: absolute;
+      right: 1.4rem;
+      font-size: 2rem;
+      top: -0.6rem;
+      color: $bg-color;
+    }
+  }
+  input {
+    @include btn-style();
+    font-size: $fs-main;
+    margin: 0;
+    background: $input-bg;
+  }
+  p {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    padding: 1rem 0 0.3rem 0.5rem;
+    font-family: $ff-main;
+    font-weight: 700;
+    font-style: normal;
+    font-size: $fs-small;
+    color: $white;
+  }
+  input::placeholder {
+    height: auto;
+    color: $grey;
+    font-size: $fs-small;
+    padding: 0 0.7rem;
+  }
+  input:focus {
+    background: $input-bg-active;
+  }
+  input.active {
+    border: 2px solid $orange;
+    position: relative;
+  }
+  .done {
+    position: relative;
+    border: 2px solid $green;
+  }
+  .wrong {
+    position: relative;
+    border: 2px solid $red;
+  }
+  .form_btn {
+    @include btn-style();
+    color: $bg-color;
+    margin: 1.2rem 0 0 0;
+    background: $btn-bg;
+    font-family: $ff-main;
+    font-style: normal;
+    font-weight: 900;
+  }
+  .form_accord {
+    display: flex;
+    align-items: center;
+    margin: 1.2rem 0 0 0;
+    label {
+      padding: 0;
+      margin: 0;
+      position: relative;
+      input {
+        display: none;
+      }
+      span {
+        display: block;
+        width: 0.7rem;
+        height: 0.7rem;
+        margin: 0;
+        position: relative;
+        border: 1px solid $grey;
+      }
+    }
+    input:checked + span:before {
+      content: "\2714";
+      position: absolute;
+      top: -0.18rem;
+      color: $orange;
+      font-size: $fs-small;
+    }
+    span {
+      margin: 0 0.5rem;
+    }
+    span, a {
+      font-family: $ff-openSans;
+      font-size: $fs-superSmall;
+      font-weight: 400;
+      color: $grey;
+      text-align: left;
+    }
+  }
+  .form_status {
+    display: block;
+    width: 100%;
+    padding: 0.4rem 0;
+    color: $red;
+    text-align: left;
+    font-size: $fs-small;
+  }
+}
