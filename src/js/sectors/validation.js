@@ -93,7 +93,7 @@ const initValidationForm = () => {
   const validateDay = (current_el) => {
     let value = current_el.value;
     let month_value = document.querySelector('#month').value;
-    if (month_value && new Date(2021, month_value, Math.trunc(value), 0, 0, 0, 0).getDay() !== Math.trunc(value)) {
+    if (month_value && new Date(2021, month_value, Math.trunc(value), 0, 0, 0, 0).getDate() !== Math.trunc(value)) {
       addClassWrong(current_el, '.form_date_status');
     } else {
       addClassDone(current_el, '.form_date_status');

@@ -90,11 +90,12 @@ body {
         min-height: 240px;
       }
       main {
-        .main_btn {
+        .main_btn, .selection_btn {
           margin: 35px 0 16px 0;
+          padding: 1.4rem 0 calc(1.4rem + 1px) 0.5rem;
           width: 100%;
           max-width: 400px;
-          font-size: 32px;
+          font-size: 28px;
         }
         .main_comments {
           .comment_wrapper {
@@ -105,11 +106,11 @@ body {
               }
               .comment_info {
                 h3 {
-                  font-size: 28px;
-                  padding: 0.4rem 0 0 0.4rem;
+                  font-size: 23px;
+                  padding: 3px 0 0 3px;
                 }
                 p {
-                  padding: 0.6rem 0 0 0.4rem;
+                  padding: 9px 0 0 3px;
                   font-size: 20px;
                 }
               }
@@ -122,10 +123,12 @@ body {
       }
       .main_block {
         .main_btns {
-          button {
+          .selection_btn {
             margin: 35px 0 16px 0;
-            min-width: 400px;
-            font-size: 32px;
+            padding: 1.4rem 0 calc(1.4rem + 1px) 0.5rem;
+            width: 100%;
+            max-width: 400px;
+            font-size: 28px;
           }
         }
         h3 {
